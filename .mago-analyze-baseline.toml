@@ -1,0 +1,1009 @@
+variant = "loose"
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\ai\seoaihooks::pageupdated`: expected `unknown-ref(Kirby\Cms\Page)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\ai\seoaihooks::siteupdated`: expected `unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\panel\seopanelactions::dialog`: expected `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\panel\seopanelactions::dropdown`: expected `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\panel\seopanelactions::submit`: expected `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\panel\seopanelbuttons::page`: expected `unknown-ref(Kirby\Cms\Page)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `bnomei\seo\kirby\ai\seoaihooks::pageupdated`: expected `unknown-ref(Kirby\Cms\Page)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `bnomei\seo\kirby\ai\seoaihooks::siteupdated`: expected `unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 3
+
+[[issues]]
+file = "index.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Site` does not exist.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "non-existent-method"
+message = 'Method `instance` does not exist on type `Kirby\Cms\App`.'
+count = 3
+
+[[issues]]
+file = "index.php"
+code = "non-existent-method"
+message = 'Method `page` does not exist on type `Kirby\Cms\Find`.'
+count = 3
+
+[[issues]]
+file = "index.php"
+code = "non-existent-method"
+message = 'Method `plugin` does not exist on type `Kirby\Cms\App`.'
+count = 1
+
+[[issues]]
+file = "index.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `bnomei\seo\kirby\panel\seopanelbuttons::site`: expected `unknown-ref(Kirby\Cms\Site)`, but possibly received `Kirby\Cms\Site`.'
+count = 1
+
+[[issues]]
+file = "snippets/seo/head.php"
+code = "ambiguous-object-method-access"
+message = "Cannot statically verify method call on a generic `object` type."
+count = 1
+
+[[issues]]
+file = "snippets/seo/head.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Core/Value/SeoContentSnapshot.php"
+code = "redundant-cast"
+message = "Redundant cast to `(string)`: the expression already has this type."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/AnthropicSeoAiProviderAdapter.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/CallbackSeoAiTransport.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 3
+
+[[issues]]
+file = "src/Kirby/Ai/GeminiSeoAiProviderAdapter.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/OpenAiSeoAiProviderAdapter.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/OpenAiSeoAiProviderAdapter.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/RemoteSeoAiTransport.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\core\ai\seoaihttpresponse::__construct`: expected `int`, but found `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/RemoteSeoAiTransport.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `bnomei\seo\core\ai\seoaihttpresponse::__construct`: expected `array<string, mixed>|null|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/RemoteSeoAiTransport.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 4
+
+[[issues]]
+file = "src/Kirby/Ai/RemoteSeoAiTransport.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 3
+
+[[issues]]
+file = "src/Kirby/Ai/RemoteSeoAiTransport.php"
+code = "non-existent-method"
+message = 'Method `request` does not exist on type `Kirby\Http\Remote`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiHooks.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\ai\seoaiservice::for`: expected `unknown-ref(Kirby\Cms\App)`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiHooks.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiHooks.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiHooks.php"
+code = "non-existent-method"
+message = 'Method `instance` does not exist on type `Kirby\Cms\App`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiResultNormalizer.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 5
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiResultNormalizer.php"
+code = "reference-to-undefined-variable"
+message = "Reference created from a previously undefined variable `$matches`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\App)`).'
+count = 6
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Page)`).'
+count = 4
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Site)`).'
+count = 4
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `array_keys`: expected `array<('K.array_keys() extends array-key), ('V.array_keys() extends mixed)>`, but found `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 12
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 7
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-operand"
+message = "Invalid left operand: type `mixed` cannot be reliably used in string concatenation."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\ai\seoaiservice::languagecode`. Saw type `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\ai\seoaiservice::refreshmodel`. Saw type `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "no-value"
+message = 'Argument #1 passed to method `Bnomei\Seo\Kirby\Ai\SeoAiService::generatepage` has type `never`, meaning it cannot produce a value.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\App`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 25
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 25
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Page` does not exist.'
+count = 3
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiService.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\Ai\SeoAiService::generatesite`: expected `unknown-ref(Kirby\Cms\Site)`, but possibly received `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Page)`).'
+count = 12
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Site)`).'
+count = 12
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "less-specific-return-statement"
+message = 'Returned type `array<array-key, mixed>` is less specific than the declared return type `array<string, string>` for function `bnomei\seo\kirby\ai\seoaisnapshotfactory::alternateurls`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 9
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 14
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "mixed-operand"
+message = "Invalid right operand: type `mixed` cannot be reliably used in string concatenation."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "mixed-operand"
+message = "Left operand in `<=` comparison has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 8
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 8
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Page` does not exist.'
+count = 8
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Site` does not exist.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "non-existent-method"
+message = 'Method `excerpt` does not exist on type `Kirby\Toolkit\Str`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Ai/SeoAiSnapshotFactory.php"
+code = "redundant-cast"
+message = "Redundant cast to `(string)`: the expression already has this type."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\ai\seoaiservice::for`: expected `unknown-ref(Kirby\Cms\App)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Bnomei\Seo\Kirby\Ai\SeoAiService::generatepage`: expected `null|string`, but found `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Bnomei\Seo\Kirby\Ai\SeoAiService::generatesite`: expected `null|string`, but found `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `Bnomei\Seo\Kirby\Ai\SeoAiService::setaistate`: expected `null|string`, but found `nonnull`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `Bnomei\Seo\Kirby\Ai\SeoAiService::setsearchindexoverride`: expected `null|string`, but found `nonnull`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 5
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "no-value"
+message = 'Argument #1 passed to method `Bnomei\Seo\Kirby\Ai\SeoAiService::generatepage` has type `never`, meaning it cannot produce a value.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "no-value"
+message = 'Argument #1 passed to method `bnomei\seo\kirby\panel\seopanelactions::dialogpath` has type `never`, meaning it cannot produce a value.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 4
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 4
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Page` does not exist.'
+count = 4
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "non-existent-method"
+message = 'Method `instance` does not exist on type `Kirby\Cms\App`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelActions.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\Ai\SeoAiService::generatesite`: expected `unknown-ref(Kirby\Cms\Site)`, but possibly received `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelButtons.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelButtons.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/Panel/SeoPanelButtons.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Page` does not exist.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\seoruntimebridge::for`: expected `unknown-ref(Kirby\Cms\App)`, but found `mixed`.'
+count = 20
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 8
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`nonnull`)."
+count = 4
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-operand"
+message = "Invalid left operand: type `mixed` cannot be reliably used in string concatenation."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-operand"
+message = "Invalid middle operand: type `mixed` cannot be reliably used in string concatenation."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-return-statement"
+message = "Could not infer a precise return type for function `15100603305996277956:1115`. Saw type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-return-statement"
+message = "Could not infer a precise return type for function `15100603305996277956:1478`. Saw type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-return-statement"
+message = "Could not infer a precise return type for function `15100603305996277956:4102`. Saw type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-return-statement"
+message = "Could not infer a precise return type for function `15100603305996277956:4465`. Saw type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\seomethodregistry::translate`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "non-existent-method"
+message = 'Method `content` does not exist on type `Bnomei\Seo\Kirby\SeoMethodRegistry`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "non-existent-method"
+message = 'Method `kirby` does not exist on type `Bnomei\Seo\Kirby\SeoMethodRegistry`.'
+count = 24
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "non-existent-method"
+message = 'Method `translate` does not exist on type `Kirby\Toolkit\I18n`.'
+count = 3
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "non-existent-method"
+message = 'Method `url` does not exist on type `Bnomei\Seo\Kirby\SeoMethodRegistry`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::headtagsfor`: expected `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`, but possibly received `$this(Bnomei\Seo\Kirby\SeoMethodRegistry)`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::resolvepage`: expected `unknown-ref(Kirby\Cms\Page)`, but possibly received `$this(Bnomei\Seo\Kirby\SeoMethodRegistry)`.'
+count = 8
+
+[[issues]]
+file = "src/Kirby/SeoMethodRegistry.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::resolvesite`: expected `unknown-ref(Kirby\Cms\Site)`, but possibly received `$this(Bnomei\Seo\Kirby\SeoMethodRegistry)`.'
+count = 8
+
+[[issues]]
+file = "src/Kirby/SeoOptionReader.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\App)`).'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoOptionReader.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 4
+
+[[issues]]
+file = "src/Kirby/SeoOptionReader.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\App`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRoutes.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\kirby\seoruntimebridge::for`: expected `unknown-ref(Kirby\Cms\App)`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRoutes.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRoutes.php"
+code = "never-return"
+message = "Cannot return value with type 'never' from this function."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRoutes.php"
+code = "non-existent-class"
+message = 'Class `Kirby\Http\Response` not found.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRoutes.php"
+code = "non-existent-method"
+message = 'Method `instance` does not exist on type `Kirby\Cms\App`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\App)`).'
+count = 16
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Language)`).'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\ModelWithContent)`).'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Page)`).'
+count = 10
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "invalid-method-access"
+message = 'Attempting to access a method on a non-object type (`unknown-ref(Kirby\Cms\Site)`).'
+count = 4
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::arrayfrom`: expected `array<string, mixed>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::rulegroups`: expected `array<string, array<string, list<string>>>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::sitemapallowedvisibilities`: expected `array<string, mixed>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::stringfrom`: expected `array<string, mixed>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 3
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #6 of `bnomei\seo\core\value\seoresolvedmeta::__construct`: expected `array<string, string>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #8 of `bnomei\seo\core\value\seocontentsnapshot::__construct`: expected `array<string, string>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-nested-return-statement"
+message = '''Returned type `array<array-key, mixed>|list<mixed>` is less specific than the declared return type `list<string>` for function `bnomei\seo\kirby\seoruntimebridge::robotdirectives` due to nested 'mixed'.'''
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-nested-return-statement"
+message = '''Returned type `list<mixed>|list{string('listed')}` is less specific than the declared return type `list<string>` for function `bnomei\seo\kirby\seoruntimebridge::sitemapallowedvisibilities` due to nested 'mixed'.'''
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-return-statement"
+message = 'Returned type `array<array-key, mixed>` is less specific than the declared return type `array<string, string>` for function `bnomei\seo\kirby\seoruntimebridge::arrayfrom`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "less-specific-return-statement"
+message = 'Returned type `array<array-key, mixed>` is less specific than the declared return type `array<string, string>` for function `bnomei\seo\kirby\seoruntimebridge::translationurls`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::modifiedat`: expected `false|int`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::sitecontext`: expected `unknown-ref(Kirby\Cms\Site)`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `bnomei\seo\core\value\seocontentsnapshot::__construct`: expected `string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #10 of `bnomei\seo\core\value\seocontext::__construct`: expected `bool`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `bnomei\seo\core\value\seocontext::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `bnomei\seo\core\value\seocontext::__construct`: expected `string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #5 of `bnomei\seo\core\value\seocontext::__construct`: expected `null|string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #6 of `bnomei\seo\core\value\seocontext::__construct`: expected `null|string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #7 of `bnomei\seo\core\value\seocontext::__construct`: expected `null|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #9 of `bnomei\seo\core\value\seocontext::__construct`: expected `bool`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 10
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 3
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-method-access"
+message = "Attempting to access a method on a non-object type (`mixed`)."
+count = 14
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-operand"
+message = "Casting `mixed` to `bool`."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\seoruntimebridge::excerpt`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\seoruntimebridge::language`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `bnomei\seo\kirby\seoruntimebridge::languagecode`. Saw type `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "no-value"
+message = 'Argument #1 passed to method `Bnomei\Seo\Kirby\SeoRuntimeBridge::resolvepage` has type `never`, meaning it cannot produce a value.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\App`.'
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Language`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\ModelWithContent`.'
+count = 5
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Page`.'
+count = 7
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Kirby\Cms\Site`.'
+count = 5
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-class-like"
+message = 'Class, Interface, or Trait `Kirby\Cms\Page` does not exist.'
+count = 5
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "non-existent-method"
+message = 'Method `excerpt` does not exist on type `Kirby\Toolkit\Str`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Core\Renderer\SitemapXmlRenderer::render`: expected `list<Bnomei\Seo\Core\Value\SeoSitemapEntry>`, but possibly received `array<array-key, mixed>`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::applypostresolvefilters`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Page)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::applypostresolvefilters`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::contentvalue`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Page)`.'
+count = 7
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::contentvalue`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Site)`.'
+count = 7
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::enrichedsnapshot`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Page)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::enrichedsnapshot`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::resolvepage`: expected `unknown-ref(Kirby\Cms\Page)`, but possibly received `Kirby\Cms\Page`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::resolvesite`: expected `unknown-ref(Kirby\Cms\Site)`, but possibly received `unknown-ref(Kirby\Cms\Page)|unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::rulesfor`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Page)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::rulesfor`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::searchallowed`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Page)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #1 of `Bnomei\Seo\Kirby\SeoRuntimeBridge::searchallowed`: expected `unknown-ref(Kirby\Cms\ModelWithContent)`, but possibly received `unknown-ref(Kirby\Cms\Site)`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #5 of `bnomei\seo\core\value\seoresolvedmeta::__construct`: expected `list<string>`, but possibly received `array<array-key, mixed>`.'
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "possibly-null-operand"
+message = "Possibly null left operand used in string concatenation (type `null|string`)."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "redundant-condition"
+message = "Redundant ternary operator: condition is always truthy."
+count = 2
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "redundant-type-comparison"
+message = "Redundant type assertion: `$metaTags` of type `array<array-key, mixed>` is always not `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "redundant-type-comparison"
+message = "Redundant type assertion: `$robotsDirectives` of type `array<array-key, mixed>` is always not `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Kirby/SeoRuntimeBridge.php"
+code = "unknown-iterator-type"
+message = "Cannot determine the type of the expression provided to `foreach`."
+count = 1

@@ -1,0 +1,5 @@
+Title: Gelistet
+
+----
+
+Text: Oeffentliche gelistete Seite fuer die Sitemap-Ausgabe.

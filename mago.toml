@@ -1,0 +1,23 @@
+php-version = "8.2"
+
+[source]
+paths = [
+  "index.php",
+  "src",
+  "blueprints",
+  "snippets",
+  "templates",
+  "translations"
+]
+excludes = [
+  "docs/**",
+  "specs/**"
+]
+extensions = ["php"]
+
+[linter]
+integrations = ["phpunit"]
+baseline = ".mago-lint-baseline.toml"
+
+[analyzer]
+baseline = ".mago-analyze-baseline.toml"

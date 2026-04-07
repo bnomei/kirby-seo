@@ -1,0 +1,65 @@
+{
+    "name": "bnomei/kirby-seo",
+    "description": "Minimal, AI-assisted SEO plugin for Kirby CMS",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Meilick",
+            "email": "b@bnomei.com"
+        }
+    ],
+    "keywords": [
+        "kirby",
+        "kirby-cms",
+        "kirby-plugin",
+        "seo",
+        "ai"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bnomei\\Seo\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "getkirby/composer-installer": "^1.2",
+        "league/html-to-markdown": "^5.1"
+    },
+    "require-dev": {
+        "bnomei/scip-laravel": "^1.0",
+        "carthage-software/mago": "^1.14.0",
+        "getkirby/cms": "^5.3.3",
+        "pestphp/pest": "^3.8"
+    },
+    "scripts": {
+        "format": "./vendor/bin/mago format",
+        "lint": "./vendor/bin/mago lint",
+        "analyze": "./vendor/bin/mago analyze",
+        "test": "./vendor/bin/pest --colors=always",
+        "test:update-snapshots": "./vendor/bin/pest --update-snapshots",
+        "test:unit": "./vendor/bin/pest tests/Unit --colors=always",
+        "test:integration": "./vendor/bin/pest tests/Integration --colors=always",
+        "kirby": [
+            "composer install",
+            "sed -i.bak 's/function dump(/function xdump(/g' tests/kirby/config/helpers.php",
+            "sed -i.bak 's/function e(/function xe(/g' tests/kirby/config/helpers.php"
+        ],
+        "testbed:install-serp-preview": "./tests/bin/install-serp-preview.sh",
+        "testbed:setup": [
+            "@kirby",
+            "@testbed:install-serp-preview"
+        ]
+    },
+    "extra": {
+        "kirby-cms-path": "tests/kirby"
+    }
+}

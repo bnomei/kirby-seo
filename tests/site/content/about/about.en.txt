@@ -1,0 +1,33 @@
+Title: About
+
+----
+
+Text: Updated English body
+
+----
+
+Seotitle: Generated en
+
+----
+
+Seodescription: Description en
+
+----
+
+Seoimage: seo-image.jpg
+
+----
+
+Seoaisourcehash: d04ad23b0e3eabb6ee15a17b3c879a6db543b59c34cfee0a468ff1011c0f6c6f
+
+----
+
+Seoaigeneratedat: 2026-04-07T09:58:21+00:00
+
+----
+
+Seoaipromptversion: v1
+
+----
+
+Seoailanguage: en

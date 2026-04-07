@@ -1,0 +1,5 @@
+Title: Listed
+
+----
+
+Text: Public listed page for sitemap output.

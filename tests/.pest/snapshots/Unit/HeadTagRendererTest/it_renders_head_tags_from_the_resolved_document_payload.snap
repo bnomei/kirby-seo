@@ -1,0 +1,14 @@
+<title>About Us | Example</title>
+<meta name="description" content="Generated description">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/en/about">
+<link rel="alternate" hreflang="de" href="https://example.com/de/ueber-uns">
+<link rel="alternate" hreflang="en" href="https://example.com/en/about">
+<meta property="og:title" content="About Us | Example">
+<meta property="og:description" content="Generated description">
+<meta property="og:url" content="https://example.com/en/about">
+<meta property="og:image" content="https://example.com/media/about.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us | Example">
+<meta name="twitter:description" content="Generated description">
+<meta name="author" content="Bnomei">

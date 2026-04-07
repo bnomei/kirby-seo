@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="./tests/index.php"
+    colors="true"
+    stopOnFailure="false"
+>
+    <testsuites>
+        <testsuite name="kirby-seo">
+            <directory suffix="Test.php">./tests</directory>
+            <exclude>./tests/kirby</exclude>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <file>./index.php</file>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </source>
+</phpunit>

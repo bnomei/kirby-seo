@@ -1,0 +1,5 @@
+Title: Beispielseite
+
+----
+
+Description: Deutsche Fixture-Seitenbeschreibung.

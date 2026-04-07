@@ -1,0 +1,22 @@
+services:
+  frankenphp:
+    image: dunglas/frankenphp:1.12.1-php8.4-bookworm
+    working_dir: /app
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+      - frankenphp_data:/data
+      - frankenphp_config:/config
+    command:
+      - frankenphp
+      - php-server
+      - --root
+      - /app/tests/public
+      - --listen
+      - :80
+      - --access-log
+
+volumes:
+  frankenphp_data:
+  frankenphp_config:

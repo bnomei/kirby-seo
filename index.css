@@ -1,0 +1,36 @@
+:root {
+    --seo-view-button-color-icon-ok: light-dark(var(--color-green-600), var(--color-green-400));
+    --seo-view-button-color-back-problem: light-dark(var(--color-red-500), var(--color-red-700));
+    --seo-view-button-color-text-problem: var(--color-white);
+    --seo-dropdown-status-color-back-ok: light-dark(var(--color-green-250), var(--color-green-900));
+    --seo-dropdown-status-color-back-problem: light-dark(var(--color-red-250), var(--color-red-900));
+    --seo-dropdown-status-color-icon-ok: light-dark(var(--color-green-700), var(--color-green-300));
+    --seo-dropdown-status-color-icon-problem: light-dark(var(--color-red-700), var(--color-red-300));
+    --seo-dropdown-status-color-text: var(--color-text);
+}
+
+.k-seo-view-button--ok.k-button,
+.k-seo-view-button--ok > .k-button {
+    --button-color-icon: var(--seo-view-button-color-icon-ok);
+}
+
+.k-seo-view-button--problem.k-button,
+.k-seo-view-button--problem > .k-button {
+    --button-color-back: var(--seo-view-button-color-back-problem);
+    --button-color-icon: var(--seo-view-button-color-text-problem);
+    --button-color-text: var(--seo-view-button-color-text-problem);
+}
+
+.k-seo-dropdown-status.k-button {
+    --button-color-text: var(--seo-dropdown-status-color-text);
+}
+
+.k-seo-dropdown-status--ok.k-button {
+    --button-color-back: var(--seo-dropdown-status-color-back-ok);
+    --button-color-icon: var(--seo-dropdown-status-color-icon-ok);
+}
+
+.k-seo-dropdown-status--problem.k-button {
+    --button-color-back: var(--seo-dropdown-status-color-back-problem);
+    --button-color-icon: var(--seo-dropdown-status-color-icon-problem);
+}

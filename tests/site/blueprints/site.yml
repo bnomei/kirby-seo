@@ -1,0 +1,32 @@
+title: Site
+
+buttons:
+  - open
+  - preview
+  - languages
+  - seo
+
+tabs:
+  content:
+    label: Content
+    columns:
+      main:
+        width: 2/3
+        sections:
+          pages:
+            type: pages
+      sidebar:
+        width: 1/3
+        sections:
+          serpPreview:
+            extends: sections/seo/serp-preview/site
+          seoMedia:
+            type: fields
+            fields:
+              seoImage:
+                type: files
+                label: bnomei.seo.field.image.label
+                help: bnomei.seo.field.image.help
+                max: 1
+                query: site.images
+                uploads: false
