@@ -1,5 +1,11 @@
 # Kirby SEO with AI
 
+[![Kirby 5](https://flat.badgen.net/badge/Kirby/5?color=ECC748)](https://getkirby.com)
+![PHP 8.2](https://flat.badgen.net/badge/PHP/8.2?color=4E5B93&icon=php&label)
+![Release](https://flat.badgen.net/packagist/v/bnomei/kirby-seo?color=ae81ff&icon=github&label)
+[![Discord](https://flat.badgen.net/badge/discord/bnomei?color=7289da&icon=discord&label)](https://discordapp.com/users/bnomei)
+[![Buymecoffee](https://flat.badgen.net/badge/icon/donate?icon=buymeacoffee&color=FF813F&label)](https://www.buymeacoffee.com/bnomei)
+
 Minimal, mostly zero-config SEO plugin for Kirby CMS.
 
 It gives you:
