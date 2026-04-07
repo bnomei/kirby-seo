@@ -1,0 +1,25 @@
+# Git
+.gitattributes export-ignore
+.gitignore export-ignore
+*.DS_Store export-ignore
+
+# Development
+.env.example export-ignore
+.frigg/** export-ignore
+.github/** export-ignore
+.vscode/** export-ignore
+AGENTS.md export-ignore
+diagrams/** export-ignore
+docker-compose.yml export-ignore
+docs/** export-ignore
+specs/** export-ignore
+
+# QA and local tooling
+.mago-*.toml export-ignore
+mago.toml export-ignore
+phpunit.xml export-ignore
+tests/** export-ignore
+vendor/** export-ignore
+
+# Composer and dependency lockfiles
+composer.lock export-ignore
