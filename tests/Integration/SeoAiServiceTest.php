@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Bnomei\Seo\Core\Ai\SeoAiHttpRequest;
 use Bnomei\Seo\Kirby\Ai\SeoAiService;
 use Bnomei\Seo\Kirby\SeoFields;
 
@@ -117,6 +118,38 @@ it('allows overriding the ai source text with a closure that returns a string', 
     SeoAiService::for($kirby)->generatePage($page, 'en');
 
     expect($source)->toBe('Updated English body');
+});
+
+it('uses a custom ai transport when configured', function (): void {
+    $request = null;
+    $kirby = testKirby([
+        'options' => [
+            'bnomei.seo.ai.provider' => 'openai',
+            'bnomei.seo.ai.providers.openai' => [
+                'apiKey' => 'test-openai-key',
+            ],
+            'bnomei.seo.ai.transport' => static function (SeoAiHttpRequest $httpRequest) use (&$request) {
+                $request = $httpRequest;
+
+                return [
+                    'statusCode' => 200,
+                    'body' => [
+                        'output_text' => '{"title":"Transport title","description":"Transport description"}',
+                    ],
+                ];
+            },
+        ],
+    ]);
+
+    $page = $kirby->site()->find('about');
+
+    SeoAiService::for($kirby)->generatePage($page, 'en');
+
+    expect($request)->toBeInstanceOf(SeoAiHttpRequest::class);
+    expect($request->method)->toBe('POST');
+    expect($request->url)->toBe('https://api.openai.com/v1/responses');
+    expect($page->content('en')->get('seoTitle')->value())->toBe('Transport title');
+    expect($page->content('en')->get('seoDescription')->value())->toBe('Transport description');
 });
 
 it('strips images and non-body noise from rendered ai source markdown', function (): void {
