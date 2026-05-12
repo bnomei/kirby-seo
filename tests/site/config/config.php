@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 return [
-    'api.csrf' => 'dev',
+    // 'api.csrf' => 'dev',
     'debug' => true,
     'languages' => true,
     'panel' => [
-        'dev' => true,
+        // 'dev' => true,
     ],
     'thumbs' => [
         'presets' => [
