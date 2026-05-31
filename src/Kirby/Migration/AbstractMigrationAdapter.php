@@ -170,16 +170,16 @@ abstract class AbstractMigrationAdapter implements MigrationAdapter
         }
 
         if (str_contains($value, 'noindex')) {
-            return '0';
+            return 'blocked';
         }
 
         if (str_contains($value, 'index')) {
-            return '1';
+            return 'allowed';
         }
 
         return match ($value) {
-            '1', 'true', 'yes' => '1',
-            '0', 'false', 'no' => '0',
+            'allowed', 'allow', '1', 'true', 'yes' => 'allowed',
+            'blocked', 'block', 'hide', '0', 'false', 'no' => 'blocked',
             default => null,
         };
     }

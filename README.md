@@ -144,7 +144,7 @@ The core fields are:
 - `seoDescription` using Kirby's `textarea` field with `buttons: false`
 - `seoCanonical` using Kirby's `url` field
 - `seoImage` using Kirby's `files` field
-- `seoIndex` using Kirby's `toggle` field
+- `seoIndex` using Kirby's `radio` field with `Default`, `Allowed`, and `Blocked` options
 
 `seoTitle` and `seoDescription` are the fields that AI writes to. If an editor changes either value in the Panel, that saved content becomes the resolved SEO output. If AI is still set to `auto`, other content changes can trigger a refresh and regenerate those values again, so use the SEO lock action if you want to keep a manual override. `seoCanonical`, `seoImage`, and `seoIndex` are regular manual overrides.
 
@@ -187,16 +187,22 @@ tabs:
                 uploads: false
                 query: page.images
               seoIndex:
-                type: toggle
+                type: radio
                 label: Search indexing
-                text:
-                  - Blocked
-                  - Allowed
+                default: default
+                columns: 3
+                options:
+                  - value: default
+                    text: Default
+                  - value: allowed
+                    text: Allowed
+                  - value: blocked
+                    text: Blocked
 ```
 
 For the site blueprint, keep the same field definitions and switch the preview section and image query to `sections/seo/serp-preview/site` and `site.images`.
 
-Kirby's `textarea` field includes built-in format buttons by default, so `buttons: false` keeps the SEO description plain. If you also want other metadata in the same area, Kirby's `tags` field is available for keyword-style input, while the SEO indexing override should stay a `toggle`.
+Kirby's `textarea` field includes built-in format buttons by default, so `buttons: false` keeps the SEO description plain. If you also want other metadata in the same area, Kirby's `tags` field is available for keyword-style input, while the SEO indexing override should stay a three-option `radio` field so editors can explicitly keep the runtime default.
 
 If you prefer the ready-made SEO tab instead of wiring the fields manually, extend `seo/page` or `seo/site` in your blueprint. The plugin also keeps `tabs/seo/page` and `tabs/seo/site` available for compatibility.
 

@@ -531,8 +531,8 @@ final class SeoRuntimeBridge
         }
 
         return match ($normalized) {
-            '1', 'true', 'yes' => true,
-            '0', 'false', 'no' => false,
+            'allowed', 'allow', '1', 'true', 'yes' => true,
+            'blocked', 'block', 'hide', '0', 'false', 'no' => false,
             default => null,
         };
     }

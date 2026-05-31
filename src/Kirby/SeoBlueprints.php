@@ -100,11 +100,23 @@ final class SeoBlueprints
                     'width' => '1/3',
                     'fields' => [
                         SeoFields::INDEX => [
-                            'type' => 'toggle',
+                            'type' => 'radio',
                             'label' => 'bnomei.seo.status.index',
-                            'text' => [
-                                'Blocked',
-                                'Allowed',
+                            'default' => 'default',
+                            'columns' => 3,
+                            'options' => [
+                                [
+                                    'value' => 'default',
+                                    'text' => 'Default',
+                                ],
+                                [
+                                    'value' => 'allowed',
+                                    'text' => 'Allowed',
+                                ],
+                                [
+                                    'value' => 'blocked',
+                                    'text' => 'Blocked',
+                                ],
                             ],
                         ],
                     ],

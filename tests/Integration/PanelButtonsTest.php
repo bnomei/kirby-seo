@@ -12,6 +12,9 @@ use Kirby\Panel\Redirect;
 function testPanelKirby(array $overrides = []): App
 {
     return testKirby(array_replace_recursive([
+        'options' => [
+            'panel.dev' => true,
+        ],
         'request' => [
             'query' => [
                 'csrf' => 'dev',
@@ -183,7 +186,11 @@ it('exposes seo dropdown status rows and language-aware panel submit handlers', 
     }
 
     $page = $kirby->site()->find('about');
-    expect($page->content('de')->get('seoIndex')->value())->toBe('0');
+    expect($page->content('de')->get('seoIndex')->value())->toBe('blocked');
+
+    $dropdown = SeoPanelActions::dropdown($page);
+    expect($dropdown['allow']['disabled'])->toBeFalse();
+    expect($dropdown['hide']['disabled'])->toBeTrue();
 });
 
 it('redirects site seo actions back to the site view', function (): void {
@@ -312,7 +319,7 @@ it('rejects panel seo page actions when the current user cannot update pages', f
     $page = $kirby->site()->find('about');
     expect($page->content()->get('seoTitle')->value())->not->toBe('Denied');
     expect($page->content()->get('seoAiState')->value())->not->toBe('locked');
-    expect($page->content()->get('seoIndex')->value())->not->toBe('0');
+    expect($page->content()->get('seoIndex')->value())->not->toBe('blocked');
 })->with(['generate', 'lock', 'unlock', 'hide', 'allow']);
 
 it('rejects panel seo site actions when the current user cannot update the site', function (string $action): void {

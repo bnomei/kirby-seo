@@ -34,3 +34,26 @@ it('keeps serp preview in the content tab without a dedicated seo tab', function
     expect($siteSerpPreview['descriptionContentKey'])->toBe('seoDescription');
     expect($siteSerpPreview['defaultDescription'])->toBe('{{ site.description.value }}');
 });
+
+it('uses a tri-state radio field for the bundled search index override', function (): void {
+    $seoPageTab = \Bnomei\Seo\Kirby\SeoBlueprints::extensions()['seo/page']();
+    $seoIndexField = $seoPageTab['columns']['sidebar']['fields']['seoIndex'];
+
+    expect($seoIndexField['type'])->toBe('radio');
+    expect($seoIndexField['default'])->toBe('default');
+    expect($seoIndexField['columns'])->toBe(3);
+    expect($seoIndexField['options'])->toBe([
+        [
+            'value' => 'default',
+            'text' => 'Default',
+        ],
+        [
+            'value' => 'allowed',
+            'text' => 'Allowed',
+        ],
+        [
+            'value' => 'blocked',
+            'text' => 'Blocked',
+        ],
+    ]);
+});

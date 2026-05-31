@@ -67,13 +67,13 @@ final class SeoPanelActionDropdown
                 'icon' => 'preview',
                 'text' => SeoMethodRegistry::translate('bnomei.seo.button.allow'),
                 'link' => SeoPanelActionAccess::link($model, 'allow'),
-                'disabled' => $canUpdate === false || $index === '1',
+                'disabled' => $canUpdate === false || in_array($index, ['allowed', '1'], true),
             ];
             $actions['hide'] = [
                 'icon' => 'hidden',
                 'text' => SeoMethodRegistry::translate('bnomei.seo.button.hide'),
                 'link' => SeoPanelActionAccess::link($model, 'hide'),
-                'disabled' => $canUpdate === false || $index === '0',
+                'disabled' => $canUpdate === false || in_array($index, ['blocked', '0'], true),
             ];
         }
 

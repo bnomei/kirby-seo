@@ -174,8 +174,8 @@ final class SeoAiSnapshotFactory
     private function indexOverride(Page|Site $model, string $languageCode): string
     {
         return match ($this->contentValue($model, 'seoIndex', $languageCode)) {
-            '1', 'true', 'yes' => 'allow',
-            '0', 'false', 'no' => 'hide',
+            'allowed', 'allow', '1', 'true', 'yes' => 'allow',
+            'blocked', 'block', 'hide', '0', 'false', 'no' => 'hide',
             default => 'default',
         };
     }

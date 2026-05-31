@@ -160,8 +160,8 @@ YML);
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seotitle: Old home en');
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seodescription: Old desc en');
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoimage: legacy-en.jpg');
-    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: 0');
-    expect(file_get_contents($page->version('latest')->contentFile('de')))->toContain('Seoindex: 1');
+    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: blocked');
+    expect(file_get_contents($page->version('latest')->contentFile('de')))->toContain('Seoindex: allowed');
     expect(file_get_contents($site->version('latest')->contentFile('en')))->toContain('Seotitle: Old site en');
     expect(file_get_contents($blueprint))->toContain('extends: tabs/seo/page');
 });
@@ -191,7 +191,7 @@ it('applies the distinct Tobimori v2 adapter and reports cropOgImage instead of 
         'Legacy option `tobimori.seo.canonical.base` requires manual mapping into `bnomei.seo.*`.',
     );
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seotitle: V2 home en');
-    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: 1');
+    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: allowed');
 });
 
 it('applies Fabian Meta migrations with snippet and blueprint rewrites', function (): void {
@@ -231,7 +231,7 @@ YML);
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seotitle: Fabian home en');
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seocanonical: https://example.com/fabian-home');
     expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoimage: https://example.com/fabian-home.jpg');
-    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: 0');
+    expect(file_get_contents($page->version('latest')->contentFile('en')))->toContain('Seoindex: blocked');
     expect(file_get_contents($site->version('latest')->contentFile('en')))->toContain('Seotitle: Fabian site en');
     expect(file_get_contents($blueprint))->toContain('extends: tabs/seo/page');
     expect(file_get_contents($template))->toContain("snippet('seo/head'");

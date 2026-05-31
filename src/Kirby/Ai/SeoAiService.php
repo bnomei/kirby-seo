@@ -92,7 +92,7 @@ final class SeoAiService
         $languageCode ??= $this->languageCode();
 
         return $this->guardedUpdate($model, $languageCode, [
-            'seoIndex' => $allow ? '1' : '0',
+            'seoIndex' => $allow ? 'allowed' : 'blocked',
         ]);
     }
 
