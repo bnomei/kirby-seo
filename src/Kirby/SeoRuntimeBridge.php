@@ -8,6 +8,7 @@ use Bnomei\Seo\Core\Renderer\HeadTagRenderer;
 use Bnomei\Seo\Core\Renderer\RobotsTxtRenderer;
 use Bnomei\Seo\Core\Renderer\SitemapXmlRenderer;
 use Bnomei\Seo\Core\Service\SeoResolver;
+use Bnomei\Seo\Core\Support\Timestamp;
 use Bnomei\Seo\Core\Value\SeoContentSnapshot;
 use Bnomei\Seo\Core\Value\SeoContext;
 use Bnomei\Seo\Core\Value\SeoDocumentType;
@@ -558,13 +559,10 @@ final class SeoRuntimeBridge
         };
     }
 
-    private function modifiedAt(int|false $timestamp): ?DateTimeImmutable
+    private function modifiedAt(int|string|false|null $timestamp): ?DateTimeImmutable
     {
-        if ($timestamp === false || $timestamp <= 0) {
-            return null;
-        }
-
-        return new DateTimeImmutable('@' . $timestamp);
+        // Kirby\Cms\Page::modified() is int|string|false|null (null when version has no mtime).
+        return Timestamp::toDateTimeImmutable($timestamp);
     }
 
     private function robotsSitemapUrl(SeoContext $context): string

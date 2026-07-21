@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Bnomei\Seo\Kirby\Ai;
 
 use Bnomei\Seo\Core\Ai\SeoAiSnapshot;
+use Bnomei\Seo\Core\Support\Timestamp;
 use Bnomei\Seo\Kirby\SeoOptionReader;
 use DateTimeImmutable;
 use Kirby\Cms\Page;
@@ -147,13 +148,8 @@ final class SeoAiSnapshotFactory
             return null;
         }
 
-        $timestamp = $model->modified();
-
-        if ($timestamp === false || $timestamp <= 0) {
-            return null;
-        }
-
-        return new DateTimeImmutable('@' . $timestamp);
+        // Kirby\Cms\Page::modified() is int|string|false|null (null when version has no mtime).
+        return Timestamp::toDateTimeImmutable($model->modified());
     }
 
     private function dateValue(Page|Site $model, string $field, string $languageCode): ?DateTimeImmutable
