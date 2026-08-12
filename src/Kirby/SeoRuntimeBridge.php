@@ -107,6 +107,7 @@ final class SeoRuntimeBridge
         $groups = $this->options()->robotsTxtGroups([$context, $this->kirby->site()], $this->defaultRobotsGroups());
         $groups = $this->options()->robotsTxtFilter([$context, $groups, $this->kirby->site()], $groups);
 
+        /** @var array<string, array{Allow?: list<string>, Disallow?: list<string>, Comments?: list<string>, Directives?: array<string, string|list<string>>}> $groups */
         return new SeoRobotsRules(groups: $this->ruleGroups($groups), sitemapUrls: [$this->robotsSitemapUrl($context)]);
     }
 
@@ -574,7 +575,7 @@ final class SeoRuntimeBridge
     }
 
     /**
-     * @return array<string, array<string, list<string>>>
+     * @return array<string, array{Allow?: list<string>, Disallow?: list<string>, Comments?: list<string>, Directives?: array<string, string|list<string>>}>
      */
     private function defaultRobotsGroups(): array
     {
@@ -587,7 +588,7 @@ final class SeoRuntimeBridge
     }
 
     /**
-     * @param array<string, array<string, list<string>>> $groups
+     * @param array<string, array{Allow?: list<string>, Disallow?: list<string>, Comments?: list<string>, Directives?: array<string, string|list<string>>}> $groups
      * @return list<SeoRobotsRuleGroup>
      */
     private function ruleGroups(array $groups): array
@@ -600,6 +601,7 @@ final class SeoRuntimeBridge
                 allow: array_values($rules['Allow'] ?? []),
                 disallow: array_values($rules['Disallow'] ?? []),
                 comments: array_values($rules['Comments'] ?? []),
+                directives: $rules['Directives'] ?? [],
             );
         }
 

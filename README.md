@@ -52,6 +52,32 @@ The plugin also registers public routes automatically:
 
 See `src/Kirby/SeoRoutes.php`.
 
+### Additional robots.txt directives
+
+Use the `Directives` map in a robots group for directives beyond `Allow` and `Disallow`. Each
+directive accepts one string or a list of strings, so repeated directives are supported without
+special-casing their names. For example, to publish Content Signals:
+
+```php
+return [
+    'bnomei.seo.robots.txt.groups' => [
+        '*' => [
+            'Directives' => [
+                'Content-Signal' => [
+                    'ai-train=no, search=yes, ai-input=yes',
+                ],
+            ],
+            'Allow' => ['/media'],
+            'Disallow' => ['/kirby', '/panel', '/content'],
+        ],
+    ],
+];
+```
+
+Additional directives render after `User-agent` and before `Allow` and `Disallow`. The
+`bnomei.seo.robots.txt.filter` callback receives the configured groups, including `Directives`,
+and can inspect or modify them before rendering.
+
 ## Methods
 
 The plugin registers page and site methods like:

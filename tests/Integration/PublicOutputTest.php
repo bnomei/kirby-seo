@@ -29,3 +29,36 @@ it('renders public seo surfaces through the snippet and public routes', function
     expect($sitemap->body())->toContain('<urlset');
     expect($sitemap->body())->toContain('<loc>');
 });
+
+it('allows the robots txt filter to inspect and modify structured directives', function (): void {
+    $inspected = null;
+    $kirby = testKirby([
+        'options' => [
+            'bnomei.seo.robots.txt.groups' => [
+                '*' => [
+                    'Directives' => [
+                        'Content-Signal' => 'ai-train=no',
+                    ],
+                    'Disallow' => ['/panel'],
+                ],
+            ],
+            'bnomei.seo.robots.txt.filter' => static function ($context, array $groups) use (&$inspected): array {
+                $inspected = $groups['*']['Directives'];
+                $groups['*']['Directives']['Content-Signal'] = ['ai-train=yes', 'search=yes'];
+
+                return $groups;
+            },
+        ],
+    ]);
+
+    $robots = $kirby->call('robots.txt');
+
+    expect($inspected)->toBe(['Content-Signal' => 'ai-train=no'])
+        ->and($robots)->toBeInstanceOf(Response::class)
+        ->and($robots->body())->toContain(implode("\n", [
+            'User-agent: *',
+            'Content-Signal: ai-train=yes',
+            'Content-Signal: search=yes',
+            'Disallow: /panel',
+        ]));
+});

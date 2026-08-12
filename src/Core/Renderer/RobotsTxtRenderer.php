@@ -37,6 +37,8 @@ final class RobotsTxtRenderer
 
         $lines[] = 'User-agent: ' . $group->userAgent;
 
+        $lines = [...$lines, ...$this->directiveLines($group->directives)];
+
         foreach ($group->allow as $path) {
             $lines[] = 'Allow: ' . $path;
         }
@@ -46,5 +48,21 @@ final class RobotsTxtRenderer
         }
 
         return $lines;
+    }
+
+    /**
+     * @param array<string, list<string>> $directives
+     * @return list<string>
+     */
+    private function directiveLines(array $directives): array
+    {
+        return array_merge(...array_map(
+            static fn(string $name, array $values): array => array_map(
+                static fn(string $value): string => $name . ': ' . $value,
+                $values,
+            ),
+            array_keys($directives),
+            array_values($directives),
+        ));
     }
 }
