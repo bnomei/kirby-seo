@@ -14,8 +14,14 @@ final class SeoBlueprints
         return [
             'tabs/seo/page' => static fn(): array => self::pageTab(),
             'tabs/seo/site' => static fn(): array => self::siteTab(),
-            'sections/seo/serp-preview/page' => static fn(): array => self::pageSerpPreviewSection(),
-            'sections/seo/serp-preview/site' => static fn(): array => self::siteSerpPreviewSection(),
+            'fields/seo/serp-preview/page' => static fn(): array => self::serpPreviewField(
+                defaultTitle: '{{ page.title.value }} – {{ site.title.value }}',
+                defaultDescription: '{{ page.text }}',
+            ),
+            'fields/seo/serp-preview/site' => static fn(): array => self::serpPreviewField(
+                defaultTitle: '{{ site.title.value }}',
+                defaultDescription: '{{ site.description.value }}',
+            ),
             'seo/page' => static fn(): array => self::pageTab(),
             'seo/site' => static fn(): array => self::siteTab(),
             'tabs/meta/page' => static fn(): array => self::pageTab(),
@@ -39,26 +45,10 @@ final class SeoBlueprints
         return self::tab(imageQuery: null);
     }
 
-    private static function pageSerpPreviewSection(): array
-    {
-        return self::serpPreviewSection(
-            defaultTitle: '{{ page.title.value }} – {{ site.title.value }}',
-            defaultDescription: '{{ page.text }}',
-        );
-    }
-
-    private static function siteSerpPreviewSection(): array
-    {
-        return self::serpPreviewSection(
-            defaultTitle: '{{ site.title.value }}',
-            defaultDescription: '{{ site.description.value }}',
-        );
-    }
-
     private static function tab(?string $imageQuery): array
     {
         $imageField = [
-            'type' => 'files',
+            'type' => 'filepicker',
             'label' => 'bnomei.seo.field.image.label',
             'help' => 'bnomei.seo.field.image.help',
             'max' => 1,
@@ -125,7 +115,7 @@ final class SeoBlueprints
         ];
     }
 
-    private static function serpPreviewSection(string $defaultTitle, string $defaultDescription): array
+    private static function serpPreviewField(string $defaultTitle, string $defaultDescription): array
     {
         return [
             'type' => 'serp-preview',

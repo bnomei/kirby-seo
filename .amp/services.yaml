@@ -1,0 +1,9 @@
+services:
+  panel:
+    command: php tests/bin/panel-account.php && php -S "0.0.0.0:$PORT" -t tests/public tests/kirby/router.php
+    env:
+      SEO_TEST_GENERATOR: "1"
+    health: /robots.txt
+    portal:
+      url: /panel
+      title: Kirby SEO test Panel

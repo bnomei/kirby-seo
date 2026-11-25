@@ -10,13 +10,10 @@ it('keeps serp preview in the content tab without a dedicated seo tab', function
 
     expect($pageBlueprint->tab('seo'))->toBeNull();
     expect($siteBlueprint->tab('seo'))->toBeNull();
-    expect($pageBlueprint->section('serpPreview'))->not->toBeNull();
-    expect($siteBlueprint->section('serpPreview'))->not->toBeNull();
-
-    $pageContentTab = $pageBlueprint->tab('content');
-    $siteContentTab = $siteBlueprint->tab('content');
-    $pageSerpPreview = $pageContentTab['columns']['sidebar']['sections']['serpPreview'];
-    $siteSerpPreview = $siteContentTab['columns']['sidebar']['sections']['serpPreview'];
+    expect($pageBlueprint->tab('content')->fieldNames())->toContain('serppreview');
+    expect($siteBlueprint->tab('content')->fieldNames())->toContain('serppreview');
+    $pageSerpPreview = $pageBlueprint->field('serppreview');
+    $siteSerpPreview = $siteBlueprint->field('serppreview');
 
     expect($pageSerpPreview['type'])->toBe('serp-preview');
     expect($pageSerpPreview['siteTitle'])->toBe('{{ site.title.value }}');

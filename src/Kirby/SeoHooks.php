@@ -25,6 +25,11 @@ final class SeoHooks
         };
 
         return [
+            'system.loadPlugins:after' => function () use ($flush): void {
+                if (App::instance()->option('debug') === true) {
+                    $flush();
+                }
+            },
             'page.create:after' => $flushOnly,
             'page.delete:after' => $flushOnly,
             'page.duplicate:after' => $flushOnly,

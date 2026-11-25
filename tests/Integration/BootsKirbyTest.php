@@ -13,26 +13,25 @@ it('boots the embedded kirby fixture app', function (): void {
     expect($kirby->site()->find('about'))->not->toBeNull();
 });
 
-it('registers the custom robot panel icon in the plugin bundle', function (): void {
+it('serves the SEO icons and styles as Panel plugin assets', function (): void {
     $kirby = testKirby();
     $plugin = $kirby->plugin('bnomei/seo');
     $plugins = new Plugins();
 
     expect($plugin)->not->toBeNull();
     expect($plugin->extends())->toHaveKey('icons');
-    expect($plugins->read('js'))->toContain('window.panel.plugin("bnomei/seo"');
-    expect($plugins->read('js'))->toContain('seo: `<svg');
-    expect($plugins->read('js'))->toContain('robot: `<svg');
-    expect($plugins->read('js'))->toContain('viewButtons');
-    expect($plugins->read('js'))->toContain('extends: "k-view-button"');
-    expect($plugins->read('css'))->toContain('--seo-view-button-color-icon-ok');
-    expect($plugins->read('css'))->toContain('.k-seo-view-button--problem');
+    foreach (['js' => 'robot: `<svg', 'css' => '.k-seo-view-button--problem'] as $extension => $needle) {
+        $hash = hash_file('xxh3', $plugin->root() . '/index.' . $extension);
+        expect($plugins->{$extension}())->toContain($plugin->mediaUrl() . '.' . $hash . '.' . $extension);
+        expect(Plugins::resolve('bnomei/seo', $hash, $extension)->body())->toContain($needle);
+    }
 });
 
 it('resolves default ai provider api keys from environment variables', function (): void {
-    putenv('OPENAI_API_KEY=openai-test-key');
-    putenv('ANTHROPIC_API_KEY=anthropic-test-key');
-    putenv('GEMINI_API_KEY=gemini-test-key');
+    $original = $_ENV;
+    $_ENV['OPENAI_API_KEY'] = 'openai-test-key';
+    $_ENV['ANTHROPIC_API_KEY'] = 'anthropic-test-key';
+    $_ENV['GEMINI_API_KEY'] = 'gemini-test-key';
 
     try {
         $kirby = testKirby();
@@ -47,9 +46,7 @@ it('resolves default ai provider api keys from environment variables', function 
         expect($anthropic($kirby))->toMatchArray(['apiKey' => 'anthropic-test-key']);
         expect($gemini($kirby))->toMatchArray(['apiKey' => 'gemini-test-key']);
     } finally {
-        putenv('OPENAI_API_KEY');
-        putenv('ANTHROPIC_API_KEY');
-        putenv('GEMINI_API_KEY');
+        $_ENV = $original;
     }
 });
 

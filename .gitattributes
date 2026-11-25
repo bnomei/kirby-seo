@@ -4,6 +4,8 @@
 *.DS_Store export-ignore
 
 # Development
+.agents/** export-ignore
+.amp/** export-ignore
 .env.example export-ignore
 .frigg/** export-ignore
 .github/** export-ignore

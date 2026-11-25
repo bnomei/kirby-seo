@@ -1,7 +1,7 @@
 # Kirby SEO with AI
 
-[![Kirby 5](https://flat.badgen.net/badge/Kirby/5?color=ECC748)](https://getkirby.com)
-![PHP 8.2](https://flat.badgen.net/badge/PHP/8.2?color=4E5B93&icon=php&label)
+[![Kirby 6](https://flat.badgen.net/badge/Kirby/6?color=ECC748)](https://getkirby.com/releases/6)
+![PHP 8.3+](https://flat.badgen.net/badge/PHP/8.3+?color=4E5B93&icon=php&label)
 ![Release](https://flat.badgen.net/packagist/v/bnomei/kirby-seo?color=ae81ff&icon=github&label)
 [![Discord](https://flat.badgen.net/badge/discord/bnomei?color=7289da&icon=discord&label)](https://discordapp.com/users/bnomei)
 [![Buymecoffee](https://flat.badgen.net/badge/icon/donate?icon=buymeacoffee&color=FF813F&label)](https://www.buymeacoffee.com/bnomei)
@@ -18,8 +18,8 @@ It gives you:
 
 ## Requirements
 
-- Kirby 5
-- PHP 8.2+
+- Kirby 6
+- PHP 8.3 or newer, within Kirby’s supported PHP versions
 
 ## Installation
 
@@ -27,10 +27,10 @@ It gives you:
 composer require bnomei/kirby-seo
 ```
 
-If you also want the Panel SERP preview section:
+If you also want the Panel SERP preview field:
 
 ```bash
-composer require johannschopplich/kirby-serp-preview
+composer require johannschopplich/kirby-serp-preview:^2
 ```
 
 ## Zero Config
@@ -102,7 +102,7 @@ For pages:
 buttons:
   - open
   - preview
-  - -
+  - "-"
   - settings
   - languages
   - status
@@ -138,27 +138,27 @@ The button also hints state:
 
 ## Optional SERP Preview
 
-If you install `johannschopplich/kirby-serp-preview`, you can reuse the provided section extensions.
+When upgrading from Kirby 5, move the preview from `sections:` to `fields:` and change its `extends:` prefix from `sections/seo/` to `fields/seo/`. The content keys stay the same.
 
 For pages:
 
 ```yml
-sections:
+fields:
   serpPreview:
-    extends: sections/seo/serp-preview/page
+    extends: fields/seo/serp-preview/page
 ```
 
 For the site:
 
 ```yml
-sections:
+fields:
   serpPreview:
-    extends: sections/seo/serp-preview/site
+    extends: fields/seo/serp-preview/site
 ```
 
 See `src/Kirby/SeoBlueprints.php`.
 
-Those sections preconfigure the preview to use the plugin’s SEO title and description fields, so you don’t need to wire the keys manually.
+These blueprints configure the preview to read the SEO title and description fields.
 
 ## Blueprint Fields and Overrides
 
@@ -169,12 +169,12 @@ The core fields are:
 - `seoTitle` using Kirby's `text` field
 - `seoDescription` using Kirby's `textarea` field with `buttons: false`
 - `seoCanonical` using Kirby's `url` field
-- `seoImage` using Kirby's `files` field
+- `seoImage` using Kirby's `filepicker` field
 - `seoIndex` using Kirby's `radio` field with `Default`, `Allowed`, and `Blocked` options
 
 `seoTitle` and `seoDescription` are the fields that AI writes to. If an editor changes either value in the Panel, that saved content becomes the resolved SEO output. If AI is still set to `auto`, other content changes can trigger a refresh and regenerate those values again, so use the SEO lock action if you want to keep a manual override. `seoCanonical`, `seoImage`, and `seoIndex` are regular manual overrides.
 
-If you want to keep your existing content tab, add the SEO fields as a `fields` section next to it:
+To keep your existing content tab, add the SEO fields in a sidebar column:
 
 ```yml
 tabs:
@@ -188,45 +188,42 @@ tabs:
             type: textarea
       sidebar:
         width: 1/3
-        sections:
+        fields:
           serpPreview:
-            extends: sections/seo/serp-preview/page
-          seoFields:
-            type: fields
-            fields:
-              seoTitle:
-                type: text
-                label: SEO title
-              seoDescription:
-                type: textarea
-                label: SEO description
-                buttons: false
-                maxlength: 320
-              seoCanonical:
-                type: url
-                label: Canonical URL
-              seoImage:
-                type: files
-                label: SEO image
-                max: 1
-                multiple: false
-                uploads: false
-                query: page.images
-              seoIndex:
-                type: radio
-                label: Search indexing
-                default: default
-                columns: 3
-                options:
-                  - value: default
-                    text: Default
-                  - value: allowed
-                    text: Allowed
-                  - value: blocked
-                    text: Blocked
+            extends: fields/seo/serp-preview/page
+          seoTitle:
+            type: text
+            label: SEO title
+          seoDescription:
+            type: textarea
+            label: SEO description
+            buttons: false
+            maxlength: 320
+          seoCanonical:
+            type: url
+            label: Canonical URL
+          seoImage:
+            type: filepicker
+            label: SEO image
+            max: 1
+            multiple: false
+            uploads: false
+            query: page.images
+          seoIndex:
+            type: radio
+            label: Search indexing
+            default: default
+            columns: 3
+            options:
+              - value: default
+                text: Default
+              - value: allowed
+                text: Allowed
+              - value: blocked
+                text: Blocked
 ```
 
-For the site blueprint, keep the same field definitions and switch the preview section and image query to `sections/seo/serp-preview/site` and `site.images`.
+For the site blueprint, change the preview field and image query to `fields/seo/serp-preview/site` and `site.images`.
 
 Kirby's `textarea` field includes built-in format buttons by default, so `buttons: false` keeps the SEO description plain. If you also want other metadata in the same area, Kirby's `tags` field is available for keyword-style input, while the SEO indexing override should stay a three-option `radio` field so editors can explicitly keep the runtime default.
 
@@ -357,3 +354,9 @@ return [
 ```
 
 That gives you full control over what the LLM sees.
+
+## Test the Panel in an Amp orb
+
+Run `amp orb services ensure` and open the returned Panel link. Sign in as `editor@example.test` with the generated password in `tests/runtime/panel-password`. The test site edits a disposable copy of the bilingual fixture. Generate uses a local callback; no provider key is needed.
+
+Run `composer test` for the PHP suite and `bash tests/bin/panel-smoke.sh` for an authenticated browser check. The latter hides the Listed page, reloads it, verifies its public robots tag and sitemap entry, then allows it again.

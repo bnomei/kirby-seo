@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    // 'api.csrf' => 'dev',
+    'url' => getenv('PUBLIC_URL') ?: null,
     'debug' => true,
     'languages' => true,
     'panel' => [

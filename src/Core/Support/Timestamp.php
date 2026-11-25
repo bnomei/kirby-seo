@@ -9,10 +9,7 @@ use DateTimeImmutable;
 final class Timestamp
 {
     /**
-     * Convert a Kirby model/version mtime into a UTC DateTimeImmutable.
-     *
-     * Kirby\Cms\Page::modified() is typed as int|string|false|null
-     * (null when a content version has no mtime).
+     * Convert a modification time to UTC, or return null if the version has no timestamp.
      */
     public static function toDateTimeImmutable(int|string|false|null $timestamp): ?DateTimeImmutable
     {

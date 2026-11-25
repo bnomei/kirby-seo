@@ -29,7 +29,7 @@ final class SeoPanelActionAccess
 
     public static function canUpdate(Page|Site $model): bool
     {
-        return $model->permissions()->can('update') === true;
+        return $model->guards()->isAvailable('update');
     }
 
     public static function link(Page|Site $model, string $action): string
